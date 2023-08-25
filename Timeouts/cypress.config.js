@@ -10,6 +10,8 @@ module.exports = defineConfig({
     },
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     pageLoadTimeout: 120000,
-    defaultCommandTimeout: 10000
+    defaultCommandTimeout: 10000,
+    viewportHeight: 1080,
+    viewportWidth: 1920
   },
 });

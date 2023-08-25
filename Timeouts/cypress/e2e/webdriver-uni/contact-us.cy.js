@@ -9,7 +9,9 @@ describe('Test Contact Us form via WebDriverUni',()=>{
 
     const homepage_PO = new HomepagePO();
     const contact_Us_PO = new Contact_Us_PO();
-
+    // before(()=>{
+    //     cy.viewport(550,750);
+    // })
     beforeEach(()=>{
         homepage_PO.visitHomepage();
         cy.wait(3000);
