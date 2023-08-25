@@ -5,7 +5,11 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    env:{
+      baseUrl:'http://www.webdriveruniversity.com'
+    },
     specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
-    baseUrl:'http://www.webdriveruniversity.com'
+    pageLoadTimeout: 120000,
+    defaultCommandTimeout: 10000
   },
 });
