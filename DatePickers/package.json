@@ -1,0 +1,15 @@
+{
+  "name": "datepickers",
+  "version": "1.0.0",
+  "description": "Date Pickers via Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lazar Matrak",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "cypress": "^12.17.4"
+  }
+}
