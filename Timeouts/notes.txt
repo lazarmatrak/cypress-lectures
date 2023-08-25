@@ -23,3 +23,8 @@ Inside of it paste
 
 This will enable the mocha-junit reporter to run the specs via "reporterEnabled"
 And the "mochaJunitReporterReporterOptions" - "mochaFile" specifies where the results and in what format will they be output
+
+*** Merging test result files ***
+npx junit-merge -d cypress/results/junit -a cypress/results/junit/results.xml
+-d is delta; -a is the month (August as of the time of this doc being written)
+results.xml is the file that will contain all the data of the test files
