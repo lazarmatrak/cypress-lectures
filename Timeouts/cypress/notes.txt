@@ -1,0 +1,2 @@
+*** Cypress multi reporters ***
+To install the cypress multi reporters paste npm install --save-dev cypress-multi-reporters mocha-junit-reporter into the project directory via terminal
