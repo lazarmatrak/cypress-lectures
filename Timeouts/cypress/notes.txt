@@ -1,2 +1,25 @@
 *** Cypress multi reporters ***
 To install the cypress multi reporters paste npm install --save-dev cypress-multi-reporters mocha-junit-reporter into the project directory via terminal
+
+*** Configure reporters ***
+1. 
+In cypress.config.js paste:
+reporter: "cypress-multi-reporters",
+    reporterOptions: {
+      configFile: "reporter-config.json",
+    }
+
+This will tell Cypress which reporters to use via the "reporter" property and where their configuration will be located in the reporterOptions.configFile property
+
+2. 
+Create in the base folder a reporter-config.json file
+Inside of it paste 
+{
+  "reporterEnabled": "spec, mocha-junit-reporter",
+  "mochaJunitReporterReporterOptions": {
+    "mochaFile": "cypress/results/junit/results-[hash].xml"
+  }
+}
+
+This will enable the mocha-junit reporter to run the specs via "reporterEnabled"
+And the "mochaJunitReporterReporterOptions" - "mochaFile" specifies where the results and in what format will they be output
