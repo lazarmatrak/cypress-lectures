@@ -28,3 +28,12 @@ And the "mochaJunitReporterReporterOptions" - "mochaFile" specifies where the re
 npx junit-merge -d cypress/results/junit -a cypress/results/junit/results.xml
 -d is delta; -a is the month (August as of the time of this doc being written)
 results.xml is the file that will contain all the data of the test files
+
+
+
+*** Retries ***
+Configured in the cypress.config.js file
+Add retries:{} and inside parameters like runMode, and openMode
+runMode : [value] will retry the tests a [value] amount of times
+openMode : [value] will retry the tests a [value] amount of times
+By default the retries are set to 0
