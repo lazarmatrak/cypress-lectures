@@ -19,5 +19,5 @@ describe('API Requests',()=>{
                 cy.log('ID: ' +item['id']+ ' & Title: ' + item['title'] + ' & UserId: ' +item['userId']);
             });
         });
-    })
+    });
 });
