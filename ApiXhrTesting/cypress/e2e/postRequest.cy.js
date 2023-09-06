@@ -40,7 +40,7 @@ describe('Cypress POST request',()=>{
             
         }).then(()=>{
             let latestPost = titleOfPosts[titleOfPosts.length-1];
-            expect(latestPost).to.eql(titleOfPosts[titleOfPosts.length-1]);
+            expect(latestPost).to.eql("at nam consequatur ea labore ea harum");
         })
     });
 });
