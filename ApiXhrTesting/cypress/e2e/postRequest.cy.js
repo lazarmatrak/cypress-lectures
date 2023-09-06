@@ -2,12 +2,13 @@
 
 describe('Cypress POST request',()=>{
     let titleOfPosts = new Array();
+    let randomTitle = Math.random().toString(36).substring(1) + Math.random().toString(36).substring(1);
     it('POST request',()=>{
         cy.request({
             method: "POST",
             url: "https://jsonplaceholder.typicode.com/posts",
             body:{
-                title:"test title",
+                title:randomTitle,
                 body: "test body"
             },
             headers:{
@@ -40,7 +41,8 @@ describe('Cypress POST request',()=>{
             
         }).then(()=>{
             let latestPost = titleOfPosts[titleOfPosts.length-1];
-            expect(latestPost).to.eql("at nam consequatur ea labore ea harum");
+            // this will not pass because the json api doesn't accept new entries
+            expect(latestPost).to.eql(randomTitle);
         })
     });
 });
