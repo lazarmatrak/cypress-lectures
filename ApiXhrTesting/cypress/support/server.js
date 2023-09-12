@@ -1,5 +1,5 @@
-import http from 'http';
-import fs from 'fs';
+const http = require('http');
+const fs = require('fs');
 
 const port = process.env.PORT || 4200;
 
