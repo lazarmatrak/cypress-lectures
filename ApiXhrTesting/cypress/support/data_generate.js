@@ -1,5 +1,6 @@
-import { faker } from "@faker-js/faker";
-import fs from "fs";
+// import { faker } from "@faker-js/faker";
+const faker = require('@faker-js/faker');
+const fs = require('fs');
 
 const generatePosts = () => {
   let data = [];
@@ -8,20 +9,20 @@ const generatePosts = () => {
     let obj = {
       post: [
         {
-          id: faker.finance.accountNumber(),
-          title: faker.lorem.sentences(2),
-          author: `${faker.person.firstName()} ${faker.person.lastName()}`,
+          id: faker.faker.finance.accountNumber(),
+          title: faker.faker.lorem.sentences(2),
+          author: `${faker.faker.person.firstName()} ${faker.faker.person.lastName()}`,
         },
       ],
       comments: [
         {
-          id: faker.finance.accountNumber(),
-          body: faker.lorem.paragraphs(2, "<br>\n"),
-          postId: faker.finance.accountNumber(),
+          id: faker.faker.finance.accountNumber(),
+          body: faker.faker.lorem.paragraphs(2, "<br>\n"),
+          postId: faker.faker.finance.accountNumber(),
         },
       ],
       author: {
-        name: `${faker.person.firstName()} ${faker.person.lastName()}`,
+        name: `${faker.faker.person.firstName()} ${faker.faker.person.lastName()}`,
       },
     };
 
