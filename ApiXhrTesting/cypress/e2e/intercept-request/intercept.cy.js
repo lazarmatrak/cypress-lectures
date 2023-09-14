@@ -33,5 +33,15 @@ describe('Intercept practice',()=>{
           
           // our 404 statusCode logic in scripts.js executed
           cy.get('.network-put-comment').should('contain', message)
+    });
+
+    it.only('Modify request',()=>{
+        cy.intercept('GET','https://jsonplaceholder.cypress.io/comments/1',(req)=>{
+            
+            req.headers['x-content-type'] = 'whatever';
+            console.log(req.headers);
+        })
+        cy.visit('https://example.cypress.io/commands/network-requests');
+        cy.get('.network-btn').click();
     })
 })
